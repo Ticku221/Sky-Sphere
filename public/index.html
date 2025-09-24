@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Weather App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="iphone-frame">
+        <div class="iphone-screen">
+            <div class="iphone-notch"></div>
+            <div id="app-container" class="app-container">
+                <div id="page-weather" class="page active">
+                    <div class="weather-app">
+                        <header class="app-header">
+                            <form id="search-form">
+                                <input type="text" id="search-input" placeholder="Search for a city...">
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </header>
+                        <main class="app-main">
+                            <section class="current-weather">
+                                <h1 id="city-name">--</h1>
+                                <p id="weather-description">Loading...</p>
+                                <div class="temperature-container">
+                                    <span id="temperature">--</span><span class="degree-symbol">°C</span>
+                                </div>
+                                <div id="rain-chance" class="rain-chance">
+                                    <i class="fa-solid fa-droplet"></i> <span>--%</span>
+                                </div>
+                                <div class="temp-details">
+                                    <span id="feels-like">Feels like: --°</span> | 
+                                    <span id="min-max-temp">H: --° L: --°</span>
+                                </div>
+                            </section>
+                            <section id="weather-details" class="weather-details card"></section>
+                            <section class="hourly-forecast card">
+                                <h2>Hourly Forecast</h2>
+                                <canvas id="hourly-chart"></canvas>
+                            </section>
+                            <section class="daily-forecast card">
+                                <h2>5-Day Forecast</h2>
+                                <div id="daily-forecast-container"></div>
+                            </section>
+
+                            <!-- FINAL, UPGRADED PLANNER -->
+                            <section id="planner-card" class="event-planner card">
+                                <!-- View 1: The Inputs -->
+                                <div id="planner-inputs">
+                                    <h2>Long-Range Planner</h2>
+                                    <p class="planner-subtitle">Get a climate briefing for any future event</p>
+                                    <div class="control-group">
+                                        <label>1. Select Location for this Plan</label>
+                                        <div class="search-container">
+                                            <input type="text" id="planner-search-input" placeholder="e.g., New York">
+                                            <button id="planner-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>2. Select Your Vibe</label>
+                                        <div class="vibe-tabs" id="vibe-options">
+                                            <button class="vibe-btn" data-vibe="Beach Day">☀️</button>
+                                            <button class="vibe-btn" data-vibe="Hiking Trip">🏞️</button>
+                                            <button class="vibe-btn" data-vibe="Outdoor Event">🎉</button>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="planner-date">3. Select Future Date</label>
+                                        <input type="date" id="planner-date">
+                                    </div>
+                                    <button id="analyze-btn" class="analyze-button" disabled>Analyze Climate</button>
+                                </div>
+                                <!-- View 2: The Results (Initially Hidden) -->
+                                <div id="planner-results" class="hidden">
+                                    <!-- Dynamic Briefing Report will be injected here -->
+                                </div>
+                            </section>
+                            <!-- END FINAL PLANNER -->
+
+                            <section class="chatbot-section card">
+                                <h2>AI Weather Assistant</h2>
+                                <div class="chatbot-messages" id="chatbot-messages"></div>
+                                <form class="chatbot-form" id="chatbot-form">
+                                    <input type="text" id="chatbot-input" placeholder="Ask about today's weather..." autocomplete="off">
+                                    <button type="submit" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+                                </form>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+                <div id="page-map" class="page"></div>
+                <div id="page-alerts" class="page">
+                    <div class="placeholder-page"><i class="fa-solid fa-bell"></i><h2>Smart Notifications</h2><p>Coming Soon</p></div>
+                </div>
+                <div id="page-history" class="page">
+                    <div class="placeholder-page"><i class="fa-solid fa-clock-rotate-left"></i><h2>Detailed History</h2><p>Coming Soon</p></div>
+                </div>
+            </div>
+            <nav class="bottom-nav">
+                <button class="nav-btn active" data-page="page-weather"><i class="fa-solid fa-cloud-sun"></i><span>Weather</span></button>
+                <button class="nav-btn" data-page="page-map"><i class="fa-solid fa-map"></i><span>Map</span></button>
+                <button class="nav-btn" data-page="page-alerts"><i class="fa-solid fa-bell"></i><span>Alerts</span></button>
+                <button class="nav-btn" data-page="page-history"><i class="fa-solid fa-clock-rotate-left"></i><span>History</span></button>
+            </nav>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "New York": {
+    "historicalData": [
+      { "year": 1995, "avg_temp": 24.5, "precipitation_mm": 20.1, "wind_speed_mph": 8.5 },
+      { "year": 2000, "avg_temp": 24.7, "precipitation_mm": 18.0, "wind_speed_mph": 8.7 },
+      { "year": 2005, "avg_temp": 25.1, "precipitation_mm": 15.5, "wind_speed_mph": 9.0 },
+      { "year": 2010, "avg_temp": 25.5, "precipitation_mm": 28.0, "wind_speed_mph": 8.1 },
+      { "year": 2015, "avg_temp": 25.8, "precipitation_mm": 30.2, "wind_speed_mph": 7.8 },
+      { "year": 2020, "avg_temp": 26.2, "precipitation_mm": 22.5, "wind_speed_mph": 8.4 },
+      { "year": 2024, "avg_temp": 26.5, "precipitation_mm": 25.0, "wind_speed_mph": 8.2 }
+    ]
+  },
+  "London": {
+    "historicalData": [
+      { "year": 1995, "avg_temp": 19.0, "precipitation_mm": 12.0, "wind_speed_mph": 12.1 },
+      { "year": 2000, "avg_temp": 19.5, "precipitation_mm": 15.2, "wind_speed_mph": 11.9 },
+      { "year": 2005, "avg_temp": 20.2, "precipitation_mm": 10.5, "wind_speed_mph": 11.5 },
+      { "year": 2010, "avg_temp": 20.8, "precipitation_mm": 8.0, "wind_speed_mph": 12.5 },
+      { "year": 2015, "avg_temp": 21.5, "precipitation_mm": 5.1, "wind_speed_mph": 13.0 },
+      { "year": 2020, "avg_temp": 21.9, "precipitation_mm": 20.0, "wind_speed_mph": 12.2 },
+      { "year": 2024, "avg_temp": 22.1, "precipitation_mm": 18.3, "wind_speed_mph": 11.8 }
+    ]
+  },
+  "Dubai": {
+    "historicalData": [
+      { "year": 1995, "avg_temp": 20.0, "precipitation_mm": 5.0, "wind_speed_mph": 10.0 },
+      { "year": 2000, "avg_temp": 20.4, "precipitation_mm": 3.1, "wind_speed_mph": 10.5 },
+      { "year": 2005, "avg_temp": 20.8, "precipitation_mm": 1.2, "wind_speed_mph": 11.2 },
+      { "year": 2010, "avg_temp": 21.2, "precipitation_mm": 0.0, "wind_speed_mph": 11.8 },
+      { "year": 2015, "avg_temp": 21.5, "precipitation_mm": 0.5, "wind_speed_mph": 12.5 },
+      { "year": 2020, "avg_temp": 22.0, "precipitation_mm": 4.0, "wind_speed_mph": 11.5 },
+      { "year": 2024, "avg_temp": 22.3, "precipitation_mm": 2.0, "wind_speed_mph": 11.0 }
+    ]
+  },
+  "Jabalpur": {
+    "historicalData": [
+      { "year": 1995, "avg_temp": 27.5, "precipitation_mm": 150.5, "wind_speed_mph": 15.0 },
+      { "year": 2000, "avg_temp": 27.6, "precipitation_mm": 165.0, "wind_speed_mph": 14.8 },
+      { "year": 2005, "avg_temp": 27.8, "precipitation_mm": 180.2, "wind_speed_mph": 14.2 },
+      { "year": 2010, "avg_temp": 28.0, "precipitation_mm": 140.1, "wind_speed_mph": 15.5 },
+      { "year": 2015, "avg_temp": 28.1, "precipitation_mm": 165.8, "wind_speed_mph": 16.5 },
+      { "year": 2020, "avg_temp": 28.3, "precipitation_mm": 195.3, "wind_speed_mph": 16.0 },
+      { "year": 2024, "avg_temp": 28.5, "precipitation_mm": 205.1, "wind_speed_mph": 15.8 }
+    ]
+  }
+}
